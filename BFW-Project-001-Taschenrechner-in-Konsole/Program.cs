@@ -4,52 +4,55 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
 {
     internal class Program
     {
-
         static void Main(string[] args)
         {
             // Globale Variablen
-            bool repeetProgram = true;
 
+            // Boolescher Wert für den Schleifendurchlauf
+            bool repeetProgram = true;
             // Die beiden Zahlen mit denen wir rechen
             double number1 = 0;
             double number2 = 0;
-
             // Die Variable für das Ergebnis
             double result = 0;
-
             // Der Rechenoperator
             string calculationOperator = null;
 
 
+            // Der eigentliche Programmablauf in einer While-Schleife
+
             // While-Schleife, um das Programm mehrmals durchlaufen zu können
             while (repeetProgram == true)
             {
-
-                // Den User zu Eingabe der ersten Zahl auffordern
+                // Die erste Zahl vom User entgegen nehmen
                 Console.WriteLine("Bitte geben Sie die erste Zahle ein.");
                 string inputNumber1 = Console.ReadLine();
                 number1 = getNumber1(inputNumber1);
 
-                // Den User zu Eingabe des Rechenoperators auffordern
+                // Den Rechenoperators vom User entgegen nehmen
                 Console.WriteLine("Bitte geben Sie den Rechenoperator ein.");
                 string inputCalculationOperator = Console.ReadLine();
                 calculationOperator = getCulationOperator(inputCalculationOperator);
 
-                // Den User zu Eingabe der zweiten Zahl auffordern
+                // Die erste Zahl vom User entgegen nehmen
                 Console.WriteLine("Bitte geben Sie die zweite Zahle ein.");
                 string inputNumber2 = Console.ReadLine();
                 number2 = getNumber2(inputNumber2);
 
+                // Das Ergebnis ausrechnen
 
-                // Funktion, um das Ergebnis zu berechnen
 
-
-                // Dem User das Ergebniss ausgeben
-                Console.WriteLine( "Das Ergebnis lautet: " + result + "." );
 
                 // Dem User das Ergebniss ausgeben
+                Console.WriteLine("Das Ergebnis lautet: " + result + ".");
+
+                // Dem User fragen, ob er noch eine Berechnung durchführen will
                 Console.WriteLine("Wollen Sie noch eine Berechnung durchführen?");
-                Console.ReadLine();
+                string inputProgramEnd = Console.ReadLine();
+                XesOrNo = ProgramEnd(inputXesOrNo);
+
+
+
 
 
 
@@ -71,8 +74,6 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
                 // Nur zu Entwicklungszwecken:
                 repeetProgram = false;
             }
-
-
         }
 
         // Statische Methoden für die Main
@@ -98,6 +99,11 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
 
             //return culationOperator;
         }
+        // Methode, um das Programm beenden zu können
+        public static string ProgramEnd()
+        {
 
+            return ;
+        }
     }
 }
