@@ -20,8 +20,6 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
 
 
             // Der eigentliche Programmablauf in einer While-Schleife
-
-            // While-Schleife, um das Programm mehrmals durchlaufen zu können
             while (repeetProgram == true)
             {
                 // Die erste Zahl vom User entgegen nehmen
@@ -78,28 +76,28 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
 
         // Statische Methoden für die Main
 
-        // Methode, um die Zahl 1 entgegenzunehmen
+        // Zahl 1 entgegenzunehmen
         public static int getNumber1(string input)
         {
             return 5; // Erstmal fester Wert zum Testen
 
             //return number1;
         }
-        // Methode, um die Zahl 2 entgegenzunehmen
+        // Zahl 2 entgegenzunehmen
         public static int getNumber2(string input)
         {
             return 3; // Erstmal fester Wert zum Testen
 
             //return number2;
         }
-        // Methode, um die Zahl 2 entgegenzunehmen
+        // Rechenoperator entgegenzunehmen
         public static string getCulationOperator(string input)
         {
             return "+"; // Erstmal fester Wert zum Testen
 
             //return culationOperator;
         }
-        // Methode, um das Programm beenden zu können
+        // Programm beenden
         public static string ProgramEnd()
         {
 
