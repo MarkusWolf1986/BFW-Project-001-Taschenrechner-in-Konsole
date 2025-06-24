@@ -10,23 +10,20 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
             // Globale Variablen
             bool repeetProgram = true;
 
-            // START des Programmablaufes
+            // Die beiden Zahlen mit denen wir rechen
+            double number1 = 0;
+            double number2 = 0;
+
+            // Die Variable für das Ergebnis
+            double result = 0;
+
+            // Der Rechenoperator
+            string calculationOperator = null;
+
 
             // While-Schleife, um das Programm mehrmals durchlaufen zu können
-            while ( repeetProgram = false )
+            while (repeetProgram == true)
             {
-                // Variable für den Programmablauf
-
-                // Die beiden Zahlen mit denen wir rechen
-                double number1 = 0;
-                double number2 = 0;
-                // Die Variable für das Ergebnis
-                double result = 0;
-                // Der Rechenoperator
-                string calculationOperator = null;
-
-
-                // Der Programmablauf
 
                 // Den User zu Eingabe der ersten Zahl auffordern
                 Console.WriteLine("Bitte geben Sie die erste Zahle ein.");
@@ -36,7 +33,7 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
                 // Den User zu Eingabe des Rechenoperators auffordern
                 Console.WriteLine("Bitte geben Sie den Rechenoperator ein.");
                 string inputCalculationOperator = Console.ReadLine();
-                calculationOperator = getalCulationOperator(inputCalculationOperator);
+                calculationOperator = getCulationOperator(inputCalculationOperator);
 
                 // Den User zu Eingabe der zweiten Zahl auffordern
                 Console.WriteLine("Bitte geben Sie die zweite Zahle ein.");
@@ -48,7 +45,7 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
 
 
                 // Dem User das Ergebniss ausgeben
-                Console.WriteLine("Das Ergebnis lautet: " + result);
+                Console.WriteLine( "Das Ergebnis lautet: " + result + "." );
 
                 // Dem User das Ergebniss ausgeben
                 Console.WriteLine("Wollen Sie noch eine Berechnung durchführen?");
@@ -56,47 +53,50 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
 
 
 
-                if ( )
-                {
-                    repeetProgram = true;
-                }
-                else if ()
-                {
-                    repeetProgram = false;
-                    Console.WriteLine("Das Programm wird beendet.");
-                }
-                else if ()
-                {
-                    Console.WriteLine("Bitte nur mit J oder N antworten.");
-                }
-
+                //if ( )
+                //{
+                //    repeetProgram = true;
+                //}
+                //else if ()
+                //{
+                //    repeetProgram = false;
+                //    Console.WriteLine("Das Programm wird beendet.");
+                //}
+                //else if ()
+                //{
+                //    Console.WriteLine("Bitte nur mit J oder N antworten.");
+                //}
 
 
                 // Nur zu Entwicklungszwecken:
                 repeetProgram = false;
-
             }
-            // ENDE des Programmablaufes
 
-            // Statische Methoden für die Main
 
-            // Methode, um die Zahl 1 entgegenzunehmen
-        public static int getNumber1()
+        }
+
+        // Statische Methoden für die Main
+
+        // Methode, um die Zahl 1 entgegenzunehmen
+        public static int getNumber1(string input)
         {
+            return 5; // Erstmal fester Wert zum Testen
 
-            return number1;
+            //return number1;
         }
         // Methode, um die Zahl 2 entgegenzunehmen
-        public static int Number2()
+        public static int getNumber2(string input)
         {
+            return 3; // Erstmal fester Wert zum Testen
 
-            return number2;
+            //return number2;
         }
         // Methode, um die Zahl 2 entgegenzunehmen
-        public static string getalCulationOperator()
+        public static string getCulationOperator(string input)
         {
+            return "+"; // Erstmal fester Wert zum Testen
 
-            return culationOperator;
+            //return culationOperator;
         }
 
     }
