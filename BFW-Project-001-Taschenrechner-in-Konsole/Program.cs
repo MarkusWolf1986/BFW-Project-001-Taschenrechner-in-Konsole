@@ -93,16 +93,14 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
         // Zahl 1 entgegenzunehmen
         public static int getNumber1(string input)
         {
-            return 5; // Erstmal fester Wert zum Testen
-
-            //return number1;
+            double number1 = Convert.ToDouble(input);
+            return number1;
         }
         // Zahl 2 entgegenzunehmen
         public static int getNumber2(string input)
         {
-            return 3; // Erstmal fester Wert zum Testen
-
-            //return number2;
+            double number2 = Convert.ToDouble(input);
+            return number2;
         }
         // Rechenoperator entgegenzunehmen
         public static string getCulationOperator(string input)
