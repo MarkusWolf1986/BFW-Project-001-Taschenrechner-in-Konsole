@@ -23,23 +23,37 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
             while (repeetProgram == true)
             {
                 // Die erste Zahl vom User entgegen nehmen
-                Console.WriteLine("Bitte geben Sie die erste Zahle ein.");
+                Console.WriteLine("Bitte geben Sie die erste Zahle ein. \n");
                 string inputNumber1 = Console.ReadLine();
                 number1 = getNumber1(inputNumber1);
 
                 // Den Rechenoperators vom User entgegen nehmen
-                Console.WriteLine("Bitte geben Sie den Rechenoperator ein.");
+                Console.WriteLine("Bitte geben Sie den Rechenoperator ein. \n");
                 string inputCalculationOperator = Console.ReadLine();
                 calculationOperator = getCulationOperator(inputCalculationOperator);
 
-                // Die erste Zahl vom User entgegen nehmen
-                Console.WriteLine("Bitte geben Sie die zweite Zahle ein.");
+                // Die zweite Zahl vom User entgegen nehmen
+                Console.WriteLine("Bitte geben Sie die zweite Zahle ein. \n");
                 string inputNumber2 = Console.ReadLine();
                 number2 = getNumber2(inputNumber2);
 
                 // Das Ergebnis ausrechnen
-
-
+                if (calculationOperator == "+")
+                {
+                    result = number1 + number2;
+                }
+                else if (calculationOperator == "-")
+                {
+                    result = number1 - number2;
+                }
+                else if (calculationOperator == "*")
+                {
+                    result = number1 * number2;
+                }
+                else (calculationOperator == "/")
+                {
+                    result = number1 / number2;
+                }
 
                 // Dem User das Ergebniss ausgeben
                 Console.WriteLine("Das Ergebnis lautet: " + result + ".");
@@ -93,15 +107,21 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
         // Rechenoperator entgegenzunehmen
         public static string getCulationOperator(string input)
         {
-            return "+"; // Erstmal fester Wert zum Testen
-
-            //return culationOperator;
+            if (input == "+" || input == "-" || input == "*" || input == "/")
+            {
+                return input;
+            }
+            else
+            {
+                Console.WriteLine("Ungültiger Operator. \n" +
+                    "+, -, * und / stehen zuer Auswahl.");
+            }
         }
         // Programm beenden
         public static string ProgramEnd()
         {
 
-            return ;
+            return;
         }
     }
 }
