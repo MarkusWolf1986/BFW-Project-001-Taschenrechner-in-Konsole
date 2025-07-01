@@ -23,19 +23,19 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
             while (repeetProgram == true)
             {
                 // Die erste Zahl vom User entgegen nehmen
-                Console.WriteLine("Bitte geben Sie die erste Zahle ein. \n"
+                Console.WriteLine("Bitte geben Sie die erste Zahle ein. \n" +
                     "ENTER zum Bestätigen");
                 string inputNumber1 = Console.ReadLine();
                 number1 = getNumber1(inputNumber1);
 
                 // Den Rechenoperators vom User entgegen nehmen
-                Console.WriteLine("Bitte geben Sie den Rechenoperator ein. \n"
+                Console.WriteLine("Bitte geben Sie den Rechenoperator ein. \n" +
                     "ENTER zum Bestätigen");
                 string inputCalculationOperator = Console.ReadLine();
                 calculationOperator = getCulationOperator(inputCalculationOperator);
 
                 // Die zweite Zahl vom User entgegen nehmen
-                Console.WriteLine("Bitte geben Sie die zweite Zahle ein. \n"
+                Console.WriteLine("Bitte geben Sie die zweite Zahle ein. \n" +
                     "ENTER zum Bestätigen");
                 string inputNumber2 = Console.ReadLine();
                 number2 = getNumber2(inputNumber2);
@@ -86,6 +86,8 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
                     }
                 }
             }
+        }
+        
 
         // Statische Methoden für die Main
 
@@ -104,15 +106,21 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
         // Rechenoperator entgegenzunehmen
         public static string getCulationOperator(string input)
         {
-            if (input == "+" || input == "-" || input == "*" || input == "/")
+            do
             {
-                return input;
-            }
-            else
-            {
-                Console.WriteLine("Ungültiger Operator. \n" +
-                    "+, -, * und / stehen zuer Auswahl.");
-            }
+                if (input == "+" || input == "-" || input == "*" || input == "/")
+                {
+                    return input;
+                }
+                else
+                {
+                    Console.WriteLine("Ungültiger Operator. \n" +
+                        "+, -, * und / stehen zur Auswahl.");
+                    Console.WriteLine("Bitte geben Sie einen gültigen Rechenoperator ein:");
+                    input = Console.ReadLine();
+                }
+
+            } while (true);  // Endlosschleife, weil return die Methode verlässt
         }
     }
 }
