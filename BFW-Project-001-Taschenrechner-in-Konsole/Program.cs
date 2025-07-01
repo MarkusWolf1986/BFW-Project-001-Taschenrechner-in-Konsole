@@ -23,20 +23,17 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
             while (repeetProgram == true)
             {
                 // Die erste Zahl vom User entgegen nehmen
-                Console.WriteLine("Bitte geben Sie die erste Zahle ein. \n" +
-                    "ENTER zum Bestätigen");
+                Console.WriteLine("Bitte geben Sie die erste Zahle ein – dann ENTER");
                 string inputNumber1 = Console.ReadLine();
                 number1 = getNumber1(inputNumber1);
 
                 // Den Rechenoperators vom User entgegen nehmen
-                Console.WriteLine("Bitte geben Sie den Rechenoperator ein. \n" +
-                    "ENTER zum Bestätigen");
+                Console.WriteLine("Bitte geben Sie den Rechenoperator ein – dann ENTER");
                 string inputCalculationOperator = Console.ReadLine();
                 calculationOperator = getCulationOperator(inputCalculationOperator);
 
                 // Die zweite Zahl vom User entgegen nehmen
-                Console.WriteLine("Bitte geben Sie die zweite Zahle ein. \n" +
-                    "ENTER zum Bestätigen");
+                Console.WriteLine("Bitte geben Sie die zweite Zahle ein – dann ENTER");
                 string inputNumber2 = Console.ReadLine();
                 number2 = getNumber2(inputNumber2);
 
@@ -64,8 +61,7 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
                 Console.WriteLine("Das Ergebnis lautet: " + result + ".");
 
                 // Dem User fragen, ob er noch eine Berechnung durchführen will
-                Console.WriteLine("Wollen Sie noch eine Berechnung durchführen? \n j oder n");
-
+                Console.WriteLine("Wollen Sie noch eine Berechnung durchführen? – j oder n");
 
                 string inputProgramEnd = null;
                 while (inputProgramEnd != "j" && inputProgramEnd != "n")
@@ -73,7 +69,7 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
                     inputProgramEnd = Console.ReadLine();
                     if (inputProgramEnd == "n")
                     {
-                        Console.WriteLine("Das Programm wird beendet.");
+                        Console.WriteLine("Das Programm wird beendet");
                         repeetProgram = false;
                     }
                     else if (inputProgramEnd == "j")
@@ -82,13 +78,12 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
                     }
                     else
                     {
-                        Console.WriteLine("Bitte nur 'j' oder 'n' eingeben!");
+                        Console.WriteLine("Bitte nur 'j' oder 'n' eingeben");
                     }
                 }
             }
         }
         
-
         // Statische Methoden für die Main
 
             // Zahl 1 entgegenzunehmen
@@ -114,8 +109,7 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
                 }
                 else
                 {
-                    Console.WriteLine("Ungültiger Operator. \n" +
-                        "+, -, * und / stehen zur Auswahl.");
+                    Console.WriteLine("Ungültiger Operator. – '+', '-', '*' und '/' stehen zur Auswahl.");
                     Console.WriteLine("Bitte geben Sie einen gültigen Rechenoperator ein:");
                     input = Console.ReadLine();
                 }
