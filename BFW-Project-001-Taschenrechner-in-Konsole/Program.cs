@@ -92,13 +92,13 @@ namespace BFW_Project_001_Taschenrechner_in_Konsole
         // Statische Methoden für die Main
 
             // Zahl 1 entgegenzunehmen
-        public static int getNumber1(string input)
+        public static double getNumber1(string input)
         {
             double number1 = Convert.ToDouble(input);
             return number1;
         }
         // Zahl 2 entgegenzunehmen
-        public static int getNumber2(string input)
+        public static double getNumber2(string input)
         {
             double number2 = Convert.ToDouble(input);
             return number2;
